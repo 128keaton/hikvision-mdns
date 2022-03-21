@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const mDnsSd = require('node-dns-sd');
+const defaultTimeout = 3;
 
 export interface HikvisionCamera {
     address: string,
@@ -13,7 +14,11 @@ export interface HikvisionCamera {
  * Discover Hikvision cameras on the network
  * @param timeout - Defaults to 3 seconds
  */
-export function discoverCameras(timeout = 3): Promise<HikvisionCamera[]> {
+export function discoverCameras(timeout = defaultTimeout): Promise<HikvisionCamera[]> {
+    if (isNaN(timeout)) {
+        timeout = defaultTimeout;
+    }
+
     return mDnsSd.discover({
         name: '_CGI._tcp.local',
         wait: timeout
@@ -53,5 +58,5 @@ export const _private = {
 /* istanbul ignore if */
 if (require.main == module) {
     /* istanbul ignore next */
-    discoverCameras().then(cameras => console.log(JSON.stringify(cameras, null, 2)));
+    discoverCameras(Number(process.argv.slice(2))).then(cameras => console.log(JSON.stringify(cameras, null, 2)));
 }

@@ -22,6 +22,13 @@ test('#findingTimeout', () => {
     });
 });
 
+test('#nanTimeout', () => {
+    const nanTimeout = Number('aaaa');
+    return discoverCameras(nanTimeout).then(cameras => {
+        expect(cameras).toBeInstanceOf(Array);
+    });
+});
+
 test('#testingParsing', () => {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const cameras = require('./cameras.json');

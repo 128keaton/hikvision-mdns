@@ -26,3 +26,50 @@ Simply call `discoverCameras()`, which returns a Promise containing an array of 
 
 You can optionally pass a greater timeout value to `discoverCameras()` to increase the search time. 
 The default is 3 seconds.
+
+### CLI
+
+You can run `discoverCameras` after installing the package globally from the command line like so:
+```shell
+$ discoverCameras
+```
+
+Additionally, you can specify the timeout like so, scanning for ten seconds:
+```shell
+$ discoverCameras 10
+```
+
+Alternatively, you could use `npx`:
+```shell
+$ npx hikvision-mdns
+```
+
+The CLI tool outputs raw, but formatted, JSON:
+```json
+[
+  {
+    "address": "10.0.1.215",
+    "name": "HIKVISION DS-2CD2955FWD-IS - 236286152",
+    "serial": "DS-2CD2955FWD-IS20190709AAWR236286152",
+    "partialSerial": "236286152"
+  },
+  {
+    "address": "10.0.1.166",
+    "name": "HIKVISION DS-2CD2722FWD-IZS - 733050127",
+    "serial": "DS-2CD2722FWD-IZS20170321BBWR733050127",
+    "partialSerial": "733050127"
+  },
+  {
+    "address": "10.0.1.164",
+    "name": "HIKVISION DS-2CD2722FWD-IZS - 733050075",
+    "serial": "DS-2CD2722FWD-IZS20170321BBWR733050075",
+    "partialSerial": "733050075"
+  },
+  {
+    "address": "10.0.1.165",
+    "name": "HIKVISION DS-2CD2722FWD-IZS - 733050169",
+    "serial": "DS-2CD2722FWD-IZS20170321BBWR733050169",
+    "partialSerial": "733050169"
+  }
+]
+```
