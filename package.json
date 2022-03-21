@@ -1,6 +1,6 @@
 {
   "name": "hikvision-mdns",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A HikVision discovery tool using mDNS/ZeroConf/Bonjour",
   "main": "dist/hikvision.js",
   "types": "dist/hikvision.d.ts",

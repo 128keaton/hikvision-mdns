@@ -1,0 +1,466 @@
+[
+  {
+    "address": "10.0.1.164",
+    "fqdn": "HIKVISION DS-2CD2722FWD-IZS - 733050075._CGI._tcp.local",
+    "modelName": "HIKVISION DS-2CD2722FWD-IZS - 733050075",
+    "familyName": null,
+    "service": {
+      "port": 80,
+      "protocol": "tcp",
+      "type": "CGI"
+    },
+    "packet": {
+      "header": {
+        "id": 0,
+        "qr": 1,
+        "op": 0,
+        "aa": 1,
+        "tc": 0,
+        "rd": 0,
+        "ra": 0,
+        "z": 0,
+        "ad": 0,
+        "cd": 0,
+        "rc": 0,
+        "questions": 0,
+        "answers": 1,
+        "authorities": 0,
+        "additionals": 7
+      },
+      "questions": [],
+      "answers": [
+        {
+          "name": "_CGI._tcp.local",
+          "type": "PTR",
+          "class": "IN",
+          "flash": false,
+          "ttl": 4500,
+          "rdata": "HIKVISION DS-2CD2722FWD-IZS - 733050075._CGI._tcp.local"
+        }
+      ],
+      "authorities": [],
+      "additionals": [
+        {
+          "name": "HIKVISION DS-2CD2722FWD-IZS - 733050075._CGI._tcp.local",
+          "type": "TXT",
+          "class": "IN",
+          "flash": true,
+          "ttl": 4500,
+          "rdata": {
+            "path": "/"
+          },
+          "rdata_buffer": {
+            "path": {
+              "type": "Buffer",
+              "data": [
+                47
+              ]
+            }
+          }
+        },
+        {
+          "name": "HIKVISION DS-2CD2722FWD-IZS - 733050075._CGI._tcp.local",
+          "type": "SRV",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": {
+            "priority": 0,
+            "weight": 0,
+            "port": 80,
+            "target": "DS-2CD2722FWD-IZS20170321BBWR733050075.local"
+          }
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050075.local",
+          "type": "A",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "10.0.1.164"
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050075.local",
+          "type": "AAAA",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "fd0e:2b24:7e05:0001:1a68:cbff:fe15:b284"
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050075.local",
+          "type": "AAAA",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "fe80:0000:0000:0000:1a68:cbff:fe15:b284"
+        },
+        {
+          "name": "HIKVISION DS-2CD2722FWD-IZS - 733050075._CGI._tcp.local",
+          "type": "NSEC",
+          "class": "IN",
+          "flash": true,
+          "ttl": 4500,
+          "rdata": "c0 27 00 05 00 00 80 00 40"
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050075.local",
+          "type": "NSEC",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "c0 76 00 04 40 00 00 08"
+        }
+      ],
+      "address": "10.0.1.164"
+    }
+  },
+  {
+    "address": "10.0.1.166",
+    "fqdn": "HIKVISION DS-2CD2722FWD-IZS - 733050127._CGI._tcp.local",
+    "modelName": "HIKVISION DS-2CD2722FWD-IZS - 733050127",
+    "familyName": null,
+    "service": {
+      "port": 80,
+      "protocol": "tcp",
+      "type": "CGI"
+    },
+    "packet": {
+      "header": {
+        "id": 0,
+        "qr": 1,
+        "op": 0,
+        "aa": 1,
+        "tc": 0,
+        "rd": 0,
+        "ra": 0,
+        "z": 0,
+        "ad": 0,
+        "cd": 0,
+        "rc": 0,
+        "questions": 0,
+        "answers": 1,
+        "authorities": 0,
+        "additionals": 7
+      },
+      "questions": [],
+      "answers": [
+        {
+          "name": "_CGI._tcp.local",
+          "type": "PTR",
+          "class": "IN",
+          "flash": false,
+          "ttl": 4500,
+          "rdata": "HIKVISION DS-2CD2722FWD-IZS - 733050127._CGI._tcp.local"
+        }
+      ],
+      "authorities": [],
+      "additionals": [
+        {
+          "name": "HIKVISION DS-2CD2722FWD-IZS - 733050127._CGI._tcp.local",
+          "type": "TXT",
+          "class": "IN",
+          "flash": true,
+          "ttl": 4500,
+          "rdata": {
+            "path": "/"
+          },
+          "rdata_buffer": {
+            "path": {
+              "type": "Buffer",
+              "data": [
+                47
+              ]
+            }
+          }
+        },
+        {
+          "name": "HIKVISION DS-2CD2722FWD-IZS - 733050127._CGI._tcp.local",
+          "type": "SRV",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": {
+            "priority": 0,
+            "weight": 0,
+            "port": 80,
+            "target": "DS-2CD2722FWD-IZS20170321BBWR733050127.local"
+          }
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050127.local",
+          "type": "A",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "10.0.1.166"
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050127.local",
+          "type": "AAAA",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "fd0e:2b24:7e05:0001:1a68:cbff:fe15:b2b8"
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050127.local",
+          "type": "AAAA",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "fe80:0000:0000:0000:1a68:cbff:fe15:b2b8"
+        },
+        {
+          "name": "HIKVISION DS-2CD2722FWD-IZS - 733050127._CGI._tcp.local",
+          "type": "NSEC",
+          "class": "IN",
+          "flash": true,
+          "ttl": 4500,
+          "rdata": "c0 27 00 05 00 00 80 00 40"
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050127.local",
+          "type": "NSEC",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "c0 76 00 04 40 00 00 08"
+        }
+      ],
+      "address": "10.0.1.166"
+    }
+  },
+  {
+    "address": "10.0.1.215",
+    "fqdn": "HIKVISION DS-2CD2955FWD-IS - 236286152._CGI._tcp.local",
+    "modelName": "HIKVISION DS-2CD2955FWD-IS - 236286152",
+    "familyName": null,
+    "service": {
+      "port": 80,
+      "protocol": "tcp",
+      "type": "CGI"
+    },
+    "packet": {
+      "header": {
+        "id": 0,
+        "qr": 1,
+        "op": 0,
+        "aa": 1,
+        "tc": 0,
+        "rd": 0,
+        "ra": 0,
+        "z": 0,
+        "ad": 0,
+        "cd": 0,
+        "rc": 0,
+        "questions": 0,
+        "answers": 1,
+        "authorities": 0,
+        "additionals": 7
+      },
+      "questions": [],
+      "answers": [
+        {
+          "name": "_CGI._tcp.local",
+          "type": "PTR",
+          "class": "IN",
+          "flash": false,
+          "ttl": 4500,
+          "rdata": "HIKVISION DS-2CD2955FWD-IS - 236286152._CGI._tcp.local"
+        }
+      ],
+      "authorities": [],
+      "additionals": [
+        {
+          "name": "HIKVISION DS-2CD2955FWD-IS - 236286152._CGI._tcp.local",
+          "type": "TXT",
+          "class": "IN",
+          "flash": true,
+          "ttl": 4500,
+          "rdata": {
+            "path": "/"
+          },
+          "rdata_buffer": {
+            "path": {
+              "type": "Buffer",
+              "data": [
+                47
+              ]
+            }
+          }
+        },
+        {
+          "name": "HIKVISION DS-2CD2955FWD-IS - 236286152._CGI._tcp.local",
+          "type": "SRV",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": {
+            "priority": 0,
+            "weight": 0,
+            "port": 80,
+            "target": "DS-2CD2955FWD-IS20190709AAWR236286152.local"
+          }
+        },
+        {
+          "name": "DS-2CD2955FWD-IS20190709AAWR236286152.local",
+          "type": "A",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "10.0.1.215"
+        },
+        {
+          "name": "DS-2CD2955FWD-IS20190709AAWR236286152.local",
+          "type": "AAAA",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "fd0e:2b24:7e05:0001:beba:c2ff:fe1f:9c67"
+        },
+        {
+          "name": "DS-2CD2955FWD-IS20190709AAWR236286152.local",
+          "type": "AAAA",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "fe80:0000:0000:0000:beba:c2ff:fe1f:9c67"
+        },
+        {
+          "name": "HIKVISION DS-2CD2955FWD-IS - 236286152._CGI._tcp.local",
+          "type": "NSEC",
+          "class": "IN",
+          "flash": true,
+          "ttl": 4500,
+          "rdata": "c0 27 00 05 00 00 80 00 40"
+        },
+        {
+          "name": "DS-2CD2955FWD-IS20190709AAWR236286152.local",
+          "type": "NSEC",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "c0 75 00 04 40 00 00 08"
+        }
+      ],
+      "address": "10.0.1.215"
+    }
+  },
+  {
+    "address": "10.0.1.165",
+    "fqdn": "HIKVISION DS-2CD2722FWD-IZS - 733050169._CGI._tcp.local",
+    "modelName": "HIKVISION DS-2CD2722FWD-IZS - 733050169",
+    "familyName": null,
+    "service": {
+      "port": 80,
+      "protocol": "tcp",
+      "type": "CGI"
+    },
+    "packet": {
+      "header": {
+        "id": 0,
+        "qr": 1,
+        "op": 0,
+        "aa": 1,
+        "tc": 0,
+        "rd": 0,
+        "ra": 0,
+        "z": 0,
+        "ad": 0,
+        "cd": 0,
+        "rc": 0,
+        "questions": 0,
+        "answers": 1,
+        "authorities": 0,
+        "additionals": 7
+      },
+      "questions": [],
+      "answers": [
+        {
+          "name": "_CGI._tcp.local",
+          "type": "PTR",
+          "class": "IN",
+          "flash": false,
+          "ttl": 4500,
+          "rdata": "HIKVISION DS-2CD2722FWD-IZS - 733050169._CGI._tcp.local"
+        }
+      ],
+      "authorities": [],
+      "additionals": [
+        {
+          "name": "HIKVISION DS-2CD2722FWD-IZS - 733050169._CGI._tcp.local",
+          "type": "TXT",
+          "class": "IN",
+          "flash": true,
+          "ttl": 4500,
+          "rdata": {
+            "path": "/"
+          },
+          "rdata_buffer": {
+            "path": {
+              "type": "Buffer",
+              "data": [
+                47
+              ]
+            }
+          }
+        },
+        {
+          "name": "HIKVISION DS-2CD2722FWD-IZS - 733050169._CGI._tcp.local",
+          "type": "SRV",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": {
+            "priority": 0,
+            "weight": 0,
+            "port": 80,
+            "target": "DS-2CD2722FWD-IZS20170321BBWR733050169.local"
+          }
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050169.local",
+          "type": "A",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "10.0.1.165"
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050169.local",
+          "type": "AAAA",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "fd0e:2b24:7e05:0001:1a68:cbff:fe15:b2e2"
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050169.local",
+          "type": "AAAA",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "fe80:0000:0000:0000:1a68:cbff:fe15:b2e2"
+        },
+        {
+          "name": "HIKVISION DS-2CD2722FWD-IZS - 733050169._CGI._tcp.local",
+          "type": "NSEC",
+          "class": "IN",
+          "flash": true,
+          "ttl": 4500,
+          "rdata": "c0 27 00 05 00 00 80 00 40"
+        },
+        {
+          "name": "DS-2CD2722FWD-IZS20170321BBWR733050169.local",
+          "type": "NSEC",
+          "class": "IN",
+          "flash": true,
+          "ttl": 120,
+          "rdata": "c0 76 00 04 40 00 00 08"
+        }
+      ],
+      "address": "10.0.1.165"
+    }
+  }
+]

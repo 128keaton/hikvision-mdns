@@ -16,29 +16,41 @@ export function discoverCameras(timeout = 3): Promise<HikvisionCamera[]> {
     return mDnsSd.discover({
         name: '_CGI._tcp.local',
         wait: timeout
-    }).then((devices: []) => {
-        return devices.map(device => {
-            const partialSerial = `${device['modelName']}`.split(' - ')[1];
-            const additionals: never[] = device['packet']['additionals'];
-            const serialAdditional = additionals.find(additional => {
-                const name = `${additional['name']}`;
-                const type = `${additional['type']}`;
+    }).then((devices: []) => parseDevices(devices));
+}
 
-                return name.includes(partialSerial) && type === 'A'
-            });
+/**
+ * Does the actual parsing, this library is just a wrapper anyway
+ * @param devices
+ */
+function parseDevices(devices: never[]): HikvisionCamera[] {
+    return devices.map(device => {
+        const partialSerial = `${device['modelName']}`.split(' - ')[1];
+        const additionals: never[] = device['packet']['additionals'];
+        const serialAdditional = additionals.find(additional => {
+            const name = `${additional['name']}`;
+            const type = `${additional['type']}`;
 
-            const serial = `${serialAdditional?.['name']}`.replace('.local', '');
-
-            return {
-                address: device['address'],
-                name: device['modelName'],
-                serial,
-                partialSerial
-            }
+            return name.includes(partialSerial) && type === 'A'
         });
+
+        const serial = `${serialAdditional?.['name']}`.replace('.local', '');
+
+        return {
+            address: device['address'],
+            name: device['modelName'],
+            serial,
+            partialSerial
+        }
     });
 }
 
+export const _private = {
+    parseDevices
+};
+
+/* istanbul ignore if */
 if (require.main == module) {
-    discoverCameras().then(cameras => console.log(cameras));
+    /* istanbul ignore next */
+    discoverCameras().then(cameras => console.log(JSON.stringify(cameras, null, 2)));
 }

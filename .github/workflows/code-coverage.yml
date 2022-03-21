@@ -1,0 +1,24 @@
+name: Coveralls
+
+on:
+  push:
+    branches: [ mane ]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          repo-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ github.token }}
+          node-version: 14
+      - run: npm i
+      - run: npm run build
+      - run: npm run coveralls
+      - uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ github.token }}
+          path-to-lcov: test/coverage/lcov.info
