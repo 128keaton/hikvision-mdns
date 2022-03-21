@@ -1,6 +1,6 @@
 {
   "name": "hikvision-mdns",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A HikVision discovery tool using mDNS/ZeroConf/Bonjour",
   "main": "dist/hikvision.js",
   "types": "dist/hikvision.d.ts",
@@ -10,7 +10,7 @@
     "test": "jest --config=jest.config.js --coverage"
   },
   "bin": {
-    "discoverCameras": "node dist/hikvision.js"
+    "discoverCameras": "./dist/hikvision.js"
   },
   "repository": {
     "type": "git",
