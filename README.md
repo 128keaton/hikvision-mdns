@@ -1,4 +1,5 @@
-# Hikvision mDNS [![npm version](https://badge.fury.io/js/hikvision-mdns.svg)](https://badge.fury.io/js/hikvision-mdns) [![Build](https://github.com/128keaton/hikvision-mdns/actions/workflows/code-coverage.yml/badge.svg)](https://github.com/128keaton/hikvision-mdns/actions/workflows/code-coverage.yml)
+# Hikvision mDNS [![npm version](https://badge.fury.io/js/hikvision-mdns.svg)](https://badge.fury.io/js/hikvision-mdns) [![Build](https://github.com/128keaton/hikvision-mdns/actions/workflows/code-coverage.yml/badge.svg)](https://github.com/128keaton/hikvision-mdns/actions/workflows/code-coverage.yml) [![Coverage Status](https://coveralls.io/repos/github/128keaton/hikvision-mdns/badge.svg?branch=mane)](https://coveralls.io/github/128keaton/hikvision-mdns?branch=mane)
+
 **A HikVision discovery tool using mDNS/ZeroConf/Bonjour**
 
 ```shell
