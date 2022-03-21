@@ -1,2 +1,15 @@
 node_modules/
-.idea/
+dist/
+
+.idea
+.coveralls.yml
+clover.xml
+coverage-final.json
+lcov.info
+coverage/lcov-report/
+
+.DS_Store
+test/coverage/*.xml
+test/coverage/*.json
+test/coverage/*.info
+test/coverage/lcov-report
