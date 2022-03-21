@@ -18,7 +18,7 @@ jobs:
         name: Install Dependencies
       - run: npm run build
         name: Build
-      - run: npm run coveralls
+      - run: npm run test
         name: Generate Code Coverage
       - uses: coverallsapp/github-action@v1.1.2
         name: Upload Code Coverage to Coveralls
