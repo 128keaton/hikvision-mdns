@@ -15,7 +15,7 @@ function discoverCameras(timeout = defaultTimeout) {
     }
     return mDnsSd.discover({
         name: '_CGI._tcp.local',
-        wait: timeout || defaultTimeout
+        wait: timeout
     }).then((devices) => parseDevices(devices));
 }
 exports.discoverCameras = discoverCameras;
