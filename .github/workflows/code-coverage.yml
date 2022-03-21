@@ -9,16 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        name: Checkout Repo
       - uses: actions/setup-node@v2
+        name: Setup Node.JS
         with:
-          repo-token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          GITHUB_TOKEN: ${{ github.token }}
           node-version: 14
       - run: npm i
+        name: Install Dependencies
       - run: npm run build
+        name: Build
       - run: npm run coveralls
+        name: Generate Code Coverage
       - uses: coverallsapp/github-action@v1.1.2
+        name: Upload Code Coverage to Coveralls
         with:
           github-token: ${{ github.token }}
           path-to-lcov: test/coverage/lcov.info
