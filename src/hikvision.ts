@@ -8,9 +8,14 @@ export interface HikvisionCamera {
     partialSerial: string
 }
 
-export function discoverCameras(): Promise<HikvisionCamera[]> {
+/**
+ * Discover Hikvision cameras on the network
+ * @param timeout - Defaults to 3 seconds
+ */
+export function discoverCameras(timeout = 3): Promise<HikvisionCamera[]> {
     return mDnsSd.discover({
-        name: '_CGI._tcp.local'
+        name: '_CGI._tcp.local',
+        wait: timeout
     }).then((devices: []) => {
         return devices.map(device => {
             const partialSerial = `${device['modelName']}`.split(' - ')[1];

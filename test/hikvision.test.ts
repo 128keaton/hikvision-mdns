@@ -4,8 +4,16 @@ test('#simple', () => {
     expect(discoverCameras).toBeInstanceOf(Function);
 });
 
+jest.setTimeout(10000);
 test('#finding', () => {
-    discoverCameras().then(cameras => {
+    return discoverCameras().then(cameras => {
         expect(cameras).toBeInstanceOf(Array);
-    })
+    });
+});
+
+jest.setTimeout(25000);
+test('#findingTimeout', () => {
+    return discoverCameras(10).then(cameras => {
+        expect(cameras).toBeInstanceOf(Array);
+    });
 });
