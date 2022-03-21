@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports._private = exports.discoverCameras = void 0;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const mDnsSd = require('node-dns-sd');
-const defaultTimeout = 3;
+const defaultTimeout = 5;
 /**
  * Discover Hikvision cameras on the network
- * @param timeout - Defaults to 3 seconds
+ * @param timeout - Defaults to 5 seconds
  */
 function discoverCameras(timeout = defaultTimeout) {
-    if (isNaN(timeout)) {
+    if (isNaN(timeout) || !timeout) {
         timeout = defaultTimeout;
     }
     return mDnsSd.discover({

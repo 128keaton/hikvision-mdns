@@ -7,7 +7,7 @@ export interface HikvisionCamera {
 }
 /**
  * Discover Hikvision cameras on the network
- * @param timeout - Defaults to 3 seconds
+ * @param timeout - Defaults to 5 seconds
  */
 export declare function discoverCameras(timeout?: number): Promise<HikvisionCamera[]>;
 /**

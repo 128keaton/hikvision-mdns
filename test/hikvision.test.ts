@@ -40,7 +40,7 @@ test('#testingParsing', () => {
 
 
 test('#cli', async () => {
-    const { stdout } = await exec('npx ts-node src/hikvision.ts', {
+    const { stdout } = await exec('dist/hikvision.js', {
         encoding: 'utf8',
     });
 

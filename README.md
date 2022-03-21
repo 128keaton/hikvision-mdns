@@ -25,7 +25,7 @@ Simply call `discoverCameras()`, which returns a Promise containing an array of 
 ```
 
 You can optionally pass a greater timeout value to `discoverCameras()` to increase the search time. 
-The default is 3 seconds.
+The default is 5 seconds.
 
 ### CLI
 

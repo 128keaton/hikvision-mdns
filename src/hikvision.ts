@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const mDnsSd = require('node-dns-sd');
-const defaultTimeout = 3;
+const defaultTimeout = 5;
 
 export interface HikvisionCamera {
     address: string,
@@ -12,10 +12,10 @@ export interface HikvisionCamera {
 
 /**
  * Discover Hikvision cameras on the network
- * @param timeout - Defaults to 3 seconds
+ * @param timeout - Defaults to 5 seconds
  */
 export function discoverCameras(timeout = defaultTimeout): Promise<HikvisionCamera[]> {
-    if (isNaN(timeout)) {
+    if (isNaN(timeout) || !timeout) {
         timeout = defaultTimeout;
     }
 
