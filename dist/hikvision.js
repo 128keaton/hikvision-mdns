@@ -1,55 +1,45 @@
 #! /usr/bin/env node
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports._private = exports.discoverCameras = void 0;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const mDnsSd = require('node-dns-sd');
-
-export interface HikvisionCamera {
-    address: string,
-    name: string,
-    serial: string,
-    partialSerial: string
-}
-
 /**
  * Discover Hikvision cameras on the network
  * @param timeout - Defaults to 3 seconds
  */
-export function discoverCameras(timeout = 3): Promise<HikvisionCamera[]> {
+function discoverCameras(timeout = 3) {
     return mDnsSd.discover({
         name: '_CGI._tcp.local',
         wait: timeout
-    }).then((devices: []) => parseDevices(devices));
+    }).then((devices) => parseDevices(devices));
 }
-
+exports.discoverCameras = discoverCameras;
 /**
  * Does the actual parsing, this library is just a wrapper anyway
  * @param devices
  */
-function parseDevices(devices: never[]): HikvisionCamera[] {
+function parseDevices(devices) {
     return devices.map(device => {
         const partialSerial = `${device['modelName']}`.split(' - ')[1];
-        const additionals: never[] = device['packet']['additionals'];
+        const additionals = device['packet']['additionals'];
         const serialAdditional = additionals.find(additional => {
             const name = `${additional['name']}`;
             const type = `${additional['type']}`;
-
-            return name.includes(partialSerial) && type === 'A'
+            return name.includes(partialSerial) && type === 'A';
         });
-
         const serial = `${serialAdditional?.['name']}`.replace('.local', '');
-
         return {
             address: device['address'],
             name: device['modelName'],
             serial,
             partialSerial
-        }
+        };
     });
 }
-
-export const _private = {
+exports._private = {
     parseDevices
 };
-
 /* istanbul ignore if */
 if (require.main == module) {
     /* istanbul ignore next */
